@@ -54,7 +54,7 @@ def assert_pytest_fails_with(args, output_substring):
 
 
 @pytest.mark.mpl_image_compare(baseline_dir=baseline_dir_local,
-                               tolerance=DEFAULT_TOLERANCE)
+                               tolerance=7.1)
 def test_succeeds():
     fig = plt.figure()
     ax = fig.add_subplot(1, 1, 1)
@@ -86,7 +86,7 @@ def test_succeeds_faulty_mirror():
 class TestClass(object):
 
     @pytest.mark.mpl_image_compare(baseline_dir=baseline_dir_local,
-                                   tolerance=DEFAULT_TOLERANCE)
+                                   tolerance=7.1)
     def test_succeeds(self):
         fig = plt.figure()
         ax = fig.add_subplot(1, 1, 1)
@@ -213,7 +213,7 @@ def test_nofigure():
 
 @pytest.mark.mpl_image_compare(baseline_dir=baseline_dir_local,
                                style='fivethirtyeight',
-                               tolerance=DEFAULT_TOLERANCE)
+                               tolerance=7.5)
 def test_base_style():
     fig = plt.figure()
     ax = fig.add_subplot(1, 1, 1)
@@ -249,7 +249,7 @@ class TestClassWithSetup:
 
     @pytest.mark.mpl_image_compare(baseline_dir=baseline_dir_local,
                                    filename='test_succeeds.png',
-                                   tolerance=DEFAULT_TOLERANCE)
+                                   tolerance=7.1)
     def test_succeeds(self):
         fig = plt.figure()
         ax = fig.add_subplot(1, 1, 1)
